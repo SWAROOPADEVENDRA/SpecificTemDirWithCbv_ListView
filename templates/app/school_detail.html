@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="background-color:Tomato;">Detail information of {{Schoolobject}} </h1>
+        <!-- <h2>Name of the school is {{Schoolobject.Sname}}</h2>
+        <h2>Principal of the school is {{Schoolobject.Sprincipal}}</h2>
+        <h2>Location of the school is {{Schoolobject.Slocation}}</h2>
+ -->
+        <table border="3px" style="background-color:green; color:white;">
+            <tr>
+                <th>School Name</th>
+                <th>School Principal</th>
+                <th>School Location</th>
+            </tr>
+
+            
+                <tr>
+                    <td>{{Schoolobject.Sname}}</td>
+                    <td>{{Schoolobject.Sprincipal}}</td>
+                    <td>{{Schoolobject.Slocation}}</td>
+                </tr>
+            
+        </table>
+        <br><br><br>
+        <h1 style="background-color:DodgerBlue;">Detail information of students</h1>
+
+        <!-- {% for sto in Schoolobject.Students.all %}
+
+        <h2>Name of the student is {{sto.Stname}}</h2>
+        <h2>Age of the student is {{sto.Stage}}</h2>
+
+        {% endfor %}
+ -->
+    
+        <table border="3px" style="border:2px solid DodgerBlue; color:white; background-color:SlateBlue; ">
+            <tr>
+                <th>Id</th>
+                <th>School Name</th>
+                <th>Student Name</th>
+                <th>Age</th>
+            </tr>
+            {% for sto in Schoolobject.Students.all %}
+
+                <tr>
+                    <td>{{sto.id}}</td>
+                    <td>{{sto.Sname}}</td>
+                    <td>{{sto.Stname}}</td>
+                    <td>{{sto.Stage}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
+
