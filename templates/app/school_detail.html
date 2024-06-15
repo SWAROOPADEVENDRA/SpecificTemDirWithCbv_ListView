@@ -54,7 +54,10 @@
             </tr>
         {% endfor %}
     </table>
-    <a href="{% url 'SchoolUpdate' pk=Schoolobject.pk %}">School Update</a>
+    <br><br>
+    <a href="{% url 'SchoolUpdate' pk=Schoolobject.pk %}" class="btn btn-success">School Update</a>
+
+    <a href="{% url 'SchoolDelete' pk=Schoolobject.pk %}" class="btn btn-secondary">School Delete</a>
 </center>
 {% endblock %}
 

@@ -8,11 +8,13 @@
 <body>
     <center>
         {% if form.instance.pk %}
-            <h1>Update School Page</h1>
+            <h1 style="background-color:green; color:aqua;">Update School Page</h1>
         {% else %}
-            <h1>Create School Page</h1>
+            <h1 style="background-color:green; color:yellow; ">Create School Page</h1>
         {% endif %}
-        <form method="POST">
+        <br>
+        <br>
+        <form method="POST" style="background-color: blue; color:white; ">
             {% csrf_token %}
                 {{form.as_p}}
             {% if form.instance.pk %}
